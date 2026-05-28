@@ -1,0 +1,40 @@
+<div class="tl_listing_container">
+  <h1>Tailwind CSS</h1>
+
+  <?php if ($this->message): ?>
+    <p class="tl_confirm"><?= $this->message ?></p>
+  <?php endif; ?>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:20px 0;">
+    <div style="padding:16px;background:#fff;border:1px solid #ddd;border-radius:6px;">
+      <strong>Status</strong><br>
+      <?= $this->buildRequired === 'Ja' ? 'Build erforderlich' : 'CSS aktuell' ?>
+    </div>
+
+    <div style="padding:16px;background:#fff;border:1px solid #ddd;border-radius:6px;">
+      <strong>Letzter Build</strong><br>
+      <?= $this->lastBuild ?>
+    </div>
+
+    <div style="padding:16px;background:#fff;border:1px solid #ddd;border-radius:6px;">
+      <strong>Letzter Cron</strong><br>
+      <?= $this->lastCron ?>
+    </div>
+
+    <div style="padding:16px;background:#fff;border:1px solid #ddd;border-radius:6px;">
+      <strong>Dauer</strong><br>
+      <?= $this->lastDuration ?>
+    </div>
+  </div>
+
+  <p>
+    <a href="<?= \Contao\Environment::get('request') ?>&build=1" class="tl_submit">
+      Tailwind CSS neu erstellen
+    </a>
+  </p>
+
+  <?php if ($this->lastOutput): ?>
+    <h2>Letzte Build-Ausgabe</h2>
+    <pre style="padding:12px;background:#f7f7f7;border:1px solid #ddd;overflow:auto;max-height:240px;"><?= $this->lastOutput ?></pre>
+  <?php endif; ?>
+</div>

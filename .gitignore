@@ -1,0 +1,7 @@
+/vendor/
+/node_modules/
+/var/
+/public/assets/tailwind/
+.DS_Store
+.env
+.idea/

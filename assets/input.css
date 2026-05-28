@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "../../../config/tailwind-theme.css";
+
+@source "../../../templates";
+@source "../../../contao/templates";
+@source "../../../packages";
+@source "../../../vendor/s-punkt-online";
+@source "../../../src";
+
+
+@source "../../../var/tailwind";
+
+@source inline("bg-red-500 text-white p-6 rounded-xl");

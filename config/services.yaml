@@ -1,0 +1,23 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  SPunktOnline\ContaoTailwindBundle\Command\:
+    resource: '../src/Command/'
+
+  SPunktOnline\ContaoTailwindBundle\EventListener\:
+    resource: '../src/EventListener/'
+
+  SPunktOnline\ContaoTailwindBundle\Service\:
+    resource: '../src/Service/'
+
+  SPunktOnline\ContaoTailwindBundle\Controller\:
+    resource: '../src/Controller/'
+    tags: [ 'controller.service_arguments' ]
+
+  SPunktOnline\ContaoTailwindBundle\Service\TailwindBuildStatus:
+    public: true
+
+  SPunktOnline\ContaoTailwindBundle\EventListener\MarkTailwindBuildRequiredListener:
+    public: true
