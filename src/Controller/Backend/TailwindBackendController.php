@@ -22,7 +22,7 @@ class TailwindBackendController extends Backend
 
     if (Input::get('build') === '1') {
       $process = new Process([
-        'php',
+        'php83',
         $projectDir . '/vendor/bin/contao-console',
         'tailwind:build',
       ], $projectDir);

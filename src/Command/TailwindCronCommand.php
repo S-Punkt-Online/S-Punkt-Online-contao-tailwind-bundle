@@ -39,7 +39,7 @@ class TailwindCronCommand extends Command
     }
 
     $process = new Process([
-      'php',
+      'php83',
       $projectDir . '/vendor/bin/contao-console',
       'tailwind:build',
     ], $projectDir);
